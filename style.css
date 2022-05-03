@@ -7,6 +7,8 @@
   --primary-color: hsl(170, 100%, 26%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
+  --brand-beige: hsl(39, 100%, 97%);
+  --brand-light: hsl(148, 23%, 89%);
   font-size: 62.5%; /* 1rem = 10px */
 }
 
@@ -58,4 +60,50 @@ button {
   gap: 1.6rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+header img {
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+  /* object-position: 0 1rem; */
+}
+
+header::before {
+  content: "";
+  width: 100vw;
+  height: 108rem;
+  background-color: var(--brand-light);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.stats {
+  width: 32.7rem;
+  margin-inline: auto;
+  background: var(--brand-beige);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6rem;
+  padding-block: 4rem;
+  border: 1px solid var(--brand-light);
+  border-radius: 6px;
+}
+
+.stat h3 {
+  font-size: 4.8rem;
+  color: var(--headline);
+  line-height: 130%;
+  margin-bottom: 0.4rem;
+}
+
+.stat p {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  line-height: 150%;
 }
