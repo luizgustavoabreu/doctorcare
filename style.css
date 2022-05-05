@@ -12,6 +12,7 @@
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97%);
   --brand-light: hsl(148, 23%, 89%);
+  --brand-dark: hsl(170, 100%, 14%);
   --bg-light: hsl(180, 14%, 97%);
   font-size: 62.5%; /* 1rem = 10px */
   --nav-height: 7.2rem;
@@ -81,6 +82,36 @@ section .content p {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 150%;
+}
+
+.button {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 4rem;
+  margin-bottom: 6rem;
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 200ms;
+}
+
+.button:hover {
+  background: var(--brand-dark);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
 }
 
 /* NAVIGATION */
@@ -186,11 +217,10 @@ body.menu-expanded .menu {
   margin-bottom: 8rem;
 }
 
-.social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
+.menu .button:hover {
+  background: var(--primary-color);
+  color: white;
+  filter: brightness(1.2);
 }
 
 body.menu-expanded .logo,
@@ -225,31 +255,16 @@ body.menu-expanded button path {
   z-index: -1;
 }
 
+#home .button {
+  margin-inline: auto;
+}
+
 #home p {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
   color: var(--paragraph);
   margin-bottom: 3.2rem;
-}
-
-#home button {
-  background: var(--primary-color);
-  border: none;
-  border-radius: 4rem;
-  margin-bottom: 6rem;
-  height: 6.2rem;
-  width: 26.3rem;
-  color: white;
-  font-size: 1.4rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-  margin-left: auto;
-  margin-right: auto;
-  text-transform: uppercase;
 }
 
 #home img {
@@ -324,4 +339,78 @@ body.menu-expanded button path {
 #about .content p {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
+}
+
+/* CONTATO */
+
+#contact {
+  text-align: left;
+}
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--primary-color);
+  padding-block: 6rem;
+  text-align: left;
+  color: white;
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+
+footer .logo svg {
+  width: 23.6rem;
+  height: 3.1rem;
+}
+
+footer .logo path {
+  fill: white;
+}
+
+footer p {
+  color: var(--brand-beige);
+  line-height: 2;
+  margin-bottom: 3.2rem;
+}
+
+footer .social-links {
+  justify-content: flex-start;
+}
+
+/* BACK TO TOP */
+
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: 200ms;
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
