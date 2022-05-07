@@ -7,7 +7,7 @@
 }
 
 :root {
-  --hue: 190;
+  --hue: 170;
   --primary-color: hsl(var(--hue), 100%, 26%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
@@ -547,6 +547,7 @@ footer .social-links {
     transition: opacity 400ms;
   }
 
+  nav#navigation .menu li a.active,
   nav#navigation .menu li a:hover {
     opacity: 1;
     font-weight: 700;
@@ -568,15 +569,18 @@ footer .social-links {
     background: white;
   }
 
+  nav#navigation .menu li a.active::after,
   nav#navigation .menu li a:hover::after {
     padding-inline: 0.8rem;
     width: 100%;
   }
 
+  nav#navigation.scroll .menu li a.active,
   nav#navigation.scroll .menu li a:hover {
     opacity: 1;
   }
 
+  nav#navigation.scroll .menu a.button.active,
   nav#navigation.scroll .menu a.button:hover {
     background: var(--primary-color);
     filter: brightness(1.3);
